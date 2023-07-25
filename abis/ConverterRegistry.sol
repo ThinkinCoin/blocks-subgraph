@@ -119,7 +119,7 @@ pragma solidity ^0.4.24;
     Note that converter addresses for each token are returned in ascending order (from oldest
     to latest).
 */
-contract BancorConverterRegistry is Owned, Utils {
+contract ConverterRegistry is Owned, Utils {
     mapping (address => bool) private tokensRegistered;         // token address -> registered or not
     mapping (address => address[]) private tokensToConverters;  // token address -> converter addresses
     mapping (address => address) private convertersToTokens;    // converter address -> token address
