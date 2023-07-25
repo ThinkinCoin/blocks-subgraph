@@ -1,5 +1,5 @@
 specVersion: 0.0.2
-description: Indexing all Arbitrum One Block data
+description: Indexing all Harmony One Block data
 repository: https://github.com/thinkincoin/blocks-subgraph
 schema:
   file: ./schema.graphql
