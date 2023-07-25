@@ -1,14 +1,14 @@
 specVersion: 0.0.2
 description: Indexing all Arbitrum One Block data
-repository: https://github.com/blocklytics/ethereum-blocks
+repository: https://github.com/thinkincoin/blocks-subgraph
 schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: ConverterRegistryContract
-    network: arbitrum-one
+    network: harmony
     source:
-      address: '0x0ddff327ddf7fe838e3e63d02001ef23ad1ede8e'
+      address: '0x720e8c305e8300e72b9199159f44de25e6a85c14'
       abi: ConverterRegistryContract
       startBlock: 1
     mapping:

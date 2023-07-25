@@ -1,0 +1,325 @@
+{
+	"compiler": {
+		"version": "0.4.24+commit.e67f0147"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_token",
+						"type": "address"
+					},
+					{
+						"name": "_index",
+						"type": "uint32"
+					}
+				],
+				"name": "unregisterConverter",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "tokens",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "acceptOwnership",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_token",
+						"type": "address"
+					},
+					{
+						"name": "_index",
+						"type": "uint32"
+					}
+				],
+				"name": "converterAddress",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_converter",
+						"type": "address"
+					}
+				],
+				"name": "tokenAddress",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "tokenCount",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_token",
+						"type": "address"
+					}
+				],
+				"name": "converterCount",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_token",
+						"type": "address"
+					},
+					{
+						"name": "_converter",
+						"type": "address"
+					}
+				],
+				"name": "registerConverter",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "newOwner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_token",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "ConverterAddition",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_token",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "ConverterRemoval",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_prevOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnerUpdate",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"methods": {
+				"acceptOwnership()": {
+					"details": "used by a new owner to accept an ownership transfer\r"
+				},
+				"converterAddress(address,uint32)": {
+					"details": "returns the converter address associated with the given token\r or zero address if no such converter exists\r",
+					"params": {
+						"_index": "converter index\r",
+						"_token": "token address\r"
+					},
+					"return": "converter address\r"
+				},
+				"converterCount(address)": {
+					"details": "returns the number of converters associated with the given token\r or 0 if the token isn't registered\r",
+					"params": {
+						"_token": "token address\r"
+					},
+					"return": "number of converters\r"
+				},
+				"registerConverter(address,address)": {
+					"details": "adds a new converter address for a given token to the registry\r throws if the converter is already registered\r",
+					"params": {
+						"_converter": "converter address\r",
+						"_token": "token address\r"
+					}
+				},
+				"tokenAddress(address)": {
+					"details": "returns the token address associated with the given converter\r or zero address if no such converter exists\r",
+					"params": {
+						"_converter": "converter address\r"
+					},
+					"return": "token address\r"
+				},
+				"tokenCount()": {
+					"details": "returns the number of tokens in the registry\r",
+					"return": "number of tokens\r"
+				},
+				"transferOwnership(address)": {
+					"details": "allows transferring the contract ownership\r the new owner still needs to accept the transfer\r can only be called by the contract owner\r",
+					"params": {
+						"_newOwner": "new contract owner\r"
+					}
+				},
+				"unregisterConverter(address,uint32)": {
+					"details": "removes an existing converter from the registry\r note that the function doesn't scale and might be needed to be called\r multiple times when removing an older converter from a large converter list\r",
+					"params": {
+						"_index": "converter index\r",
+						"_token": "token address\r"
+					}
+				}
+			}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"abis/ConverterRegistry.sol": "ConverterRegistry"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"abis/ConverterRegistry.sol": {
+			"keccak256": "0xc4710b02d9f1e0ad4d58b6b8b372bace9f3ef46fa92bffa340c164d5b4430e3b",
+			"urls": [
+				"bzzr://e27517f1e03522dd3674a8d0fab15ffb4b761928f185f1f576f7b4c6aa76d5dc"
+			]
+		}
+	},
+	"version": 1
+}

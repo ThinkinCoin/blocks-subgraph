@@ -1,0 +1,43 @@
+{
+	"compiler": {
+		"version": "0.4.24+commit.e67f0147"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"abis/ConverterRegistry.sol": "Utils"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"abis/ConverterRegistry.sol": {
+			"keccak256": "0xc4710b02d9f1e0ad4d58b6b8b372bace9f3ef46fa92bffa340c164d5b4430e3b",
+			"urls": [
+				"bzzr://e27517f1e03522dd3674a8d0fab15ffb4b761928f185f1f576f7b4c6aa76d5dc"
+			]
+		}
+	},
+	"version": 1
+}
